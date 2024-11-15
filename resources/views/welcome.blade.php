@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +10,7 @@
 <body>
     <main class="container flex justify-center">
         <h1 class="text-red-400 text-4xl">Users</h1>
+        <a href="/users/">Check users</a>
     </main>
 </body>
 </html>
