@@ -12,6 +12,7 @@
         <div class="text-white"><a href="/">Logo</a></div>
         <nav>
           <ul class="flex gap-4 text-white">
+            <li><a href="/">Home</a></li>
             <li><a href="/users">Users</a></li>
             
             <li><a href="#">About</a></li>
@@ -20,9 +21,10 @@
         </nav>
       </header>
     <main class="container flex justify-center">
-        <div>
-            <h1 class="text-red-400 text-4xl">Users</h1>
-             <a class="bg-blue-500 mt-4 px-8 rounded" href="/users/">Check users</a>
+        <div class="flex flex-col items-center p-3">
+            <h1 class="text-red-400 text-4xl  m-3">User System</h1>
+            <p>System of user data to learn Laravel.</p>
+             <a class="text-blue-500 mt-4 px-8 rounded" href="/users/">Check users</a>
         </div>
     </main>
 </body>

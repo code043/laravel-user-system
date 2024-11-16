@@ -12,6 +12,7 @@
     <div class="text-white"><a href="/">Logo</a></div>
     <nav>
       <ul class="flex gap-4 text-white">
+        <li><a href="/">Home</a></li>
         <li><a href="/users">Users</a></li>
         
         <li><a href="#">About</a></li>
