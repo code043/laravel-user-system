@@ -10,6 +10,7 @@ Route::get('/about', function () {
     return view('about');
 });
 Route::get('/users', [UserController::class, 'index'])->name('users.index');
+Route::get('/users/{id}', [UserController::class, 'info'])->name('users.info');
 // Route::get('/users', function() {
 //     // $users = [
 //     //     [
@@ -39,33 +40,33 @@ Route::get('/users', [UserController::class, 'index'])->name('users.index');
 Route::get('/users/create', function() {
     return view('users.create');
 });
-Route::get('/users/{id}', function($id) {
+// Route::get('/users/{id}', function($id) {
     
-        $users = [
-            1 => [
-                'id' => 1,
-                'name' => 'John Doe',
-                'username' => 'johndoe',
-                'role' => 'admin',
-                'email' => 'johndoe@example.com',
-                'phone' => '123-456-7890',
-                'birth_date' => '1990-01-01',
-            ],
-            2 => [
-                'id' => 2,
-                'name' => 'Jane Smith',
-                'username' => 'janesmith',
-                'role' => 'user',
-                'email' => 'janesmith@example.com',
-                'phone' => '987-654-3210',
-                'birth_date' => '1995-05-15',
-            ],
-        ];
+//         $users = [
+//             1 => [
+//                 'id' => 1,
+//                 'name' => 'John Doe',
+//                 'username' => 'johndoe',
+//                 'role' => 'admin',
+//                 'email' => 'johndoe@example.com',
+//                 'phone' => '123-456-7890',
+//                 'birth_date' => '1990-01-01',
+//             ],
+//             2 => [
+//                 'id' => 2,
+//                 'name' => 'Jane Smith',
+//                 'username' => 'janesmith',
+//                 'role' => 'user',
+//                 'email' => 'janesmith@example.com',
+//                 'phone' => '987-654-3210',
+//                 'birth_date' => '1995-05-15',
+//             ],
+//         ];
     
-        $user = $users[$id] ?? null; 
-        if (!$user) {
-            abort(404, 'User not found');
-        }
+//         $user = $users[$id] ?? null; 
+//         if (!$user) {
+//             abort(404, 'User not found');
+//         }
    
-    return view('users.info', ['user' => $user]);
-});
+//     return view('users.info', ['user' => $user]);
+// });

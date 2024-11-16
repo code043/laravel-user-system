@@ -12,4 +12,8 @@ class UserController extends Controller
         $users = User::all();
         return view('users.index', ['users' => $users]);
     }
+    public function info($id){
+        $user = User::findOrFail($id);
+        return view('users.info', ['user' => $user]);
+    }
 }
