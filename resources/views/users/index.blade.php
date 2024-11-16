@@ -1,5 +1,5 @@
 <x-layout >
-<div class="flex">
+<div class="flex justify-center flex-wrap">
   @foreach ($users as $user)
  
 

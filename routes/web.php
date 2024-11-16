@@ -6,6 +6,9 @@ use App\Http\Controllers\UserController;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/about', function () {
+    return view('about');
+});
 Route::get('/users', [UserController::class, 'index'])->name('users.index');
 // Route::get('/users', function() {
 //     // $users = [

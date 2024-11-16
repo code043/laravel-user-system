@@ -15,7 +15,7 @@
             <li><a href="/">Home</a></li>
             <li><a href="/users">Users</a></li>
             
-            <li><a href="#">About</a></li>
+            <li><a href="/about">About</a></li>
             <li class="bg-red-500 px-8 rounded"><a href="/users/create">New</a></li>
           </ul>
         </nav>
