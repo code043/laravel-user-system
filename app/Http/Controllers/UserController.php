@@ -16,4 +16,10 @@ class UserController extends Controller
         $user = User::findOrFail($id);
         return view('users.info', ['user' => $user]);
     }
+    public function create(){
+        
+    }
+    public function store(Request $request){
+        return redirect()->route('users.index');
+    }
 }
