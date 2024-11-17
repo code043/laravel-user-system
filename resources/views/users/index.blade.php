@@ -15,5 +15,6 @@
         </div>
     
   @endforeach
+  {{ $users->links() }}
 </div>
 </x-layout>

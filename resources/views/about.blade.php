@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>About</title>
+  @vite('./resources/css/app.css')
 </head>
 <body>
   <header class="flex justify-between px-3 py-4 bg-black">
@@ -20,8 +21,8 @@
     </nav>
   </header>
   <main class="container flex justify-center">
-  <div>
-    <h1>User System</h1>
+  <div class="w-[500px] p-3">
+    <h1 class="text-red-400 text-center text-4xl m-3">User System</h1>
     <p>This project is a learning-focused application built with Laravel, designed to explore the fundamentals of user data handling</p>
   </div>
   </main>
