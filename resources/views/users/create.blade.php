@@ -1,4 +1,18 @@
 <x-layout>
-  <h1>Create Page</h1>
-
+  <div>
+    <h1>Create User</h1>
+  <form action="{{ route('users.store') }}" method="POST">
+    @csrf
+    <input name="name" placeholder="Your name" type="text">
+    <input name="username" placeholder="Your username" type="text">
+    <input name="role" placeholder="Your role" type="text">
+    <input name="email" placeholder="Your email" type="email">
+    <input name="phone" placeholder="Your phone" type="text">
+    <input name="birth_date" placeholder="Your birthdate" type="text">
+    <select>
+      <option value=""></option>
+    </select>
+    <input type="submit" value="Send">
+  </form>
+  </div>  
 </x-layout>
