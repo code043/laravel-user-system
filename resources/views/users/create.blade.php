@@ -9,12 +9,12 @@
     <input name="email"  value="{{ old('email') }}" placeholder="Your email" type="email">
     <input name="phone"  value="{{ old('phone') }}" placeholder="Your phone" type="text">
     <input name="birth_date"  value="{{ old('birth_date') }}" placeholder="Your birthdate" type="text">
-    <select name="groups_id">
-      <option value="">
+    <select name="groups_id"  required>
+      <option value="" disabled selected>
           Select a Group
       </option>
       @foreach ($groups as $group)
-        <option value="{{ $group->id }}">
+        <option value="{{ $group->id }}"  {{ $group->id == old('group_id') ?'selected' : '' }}>
           {{ $group->name }}
         </option>
       @endforeach
