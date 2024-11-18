@@ -4,11 +4,11 @@
   <form action="{{ route('users.store') }}" method="POST">
     @csrf
     <input name="name" value="{{ old('name') }}" placeholder="Your name" type="text">
-    <input name="username" placeholder="Your username" type="text">
-    <input name="role" placeholder="Your role" type="text">
-    <input name="email" placeholder="Your email" type="email">
-    <input name="phone" placeholder="Your phone" type="text">
-    <input name="birth_date" placeholder="Your birthdate" type="text">
+    <input name="username"  value="{{ old('username') }}" placeholder="Your username" type="text">
+    <input name="role"  value="{{ old('role') }}" placeholder="Your role" type="text">
+    <input name="email"  value="{{ old('email') }}" placeholder="Your email" type="email">
+    <input name="phone"  value="{{ old('phone') }}" placeholder="Your phone" type="text">
+    <input name="birth_date"  value="{{ old('birth_date') }}" placeholder="Your birthdate" type="text">
     <select name="groups_id">
       <option value="">
           Select a Group
