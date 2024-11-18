@@ -13,7 +13,7 @@
         <nav>
           <ul class="flex gap-4 text-white">
             <li><a href="/">Home</a></li>
-            <li><a href="/users">Users</a></li>
+            <li><a href="{{ route('users.create') }}">Users</a></li>
             
             <li><a href="/about">About</a></li>
             <li class="bg-red-500 px-8 rounded"><a href="/users/create">New</a></li>

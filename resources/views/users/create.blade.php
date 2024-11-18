@@ -9,10 +9,19 @@
     <input name="email" placeholder="Your email" type="email">
     <input name="phone" placeholder="Your phone" type="text">
     <input name="birth_date" placeholder="Your birthdate" type="text">
-    <select>
-      <option value=""></option>
+    <select name="groups_id">
+      <option value="">
+          Select a Group
+      </option>
+      @foreach ($groups as $group)
+        <option value="{{ $group->id }}">
+          {{ $group->name }}
+        </option>
+      @endforeach
     </select>
-    <input type="submit" value="Send">
+    <button type="submit">
+      Send
+    </button>
   </form>
   </div>  
 </x-layout>

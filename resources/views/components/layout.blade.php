@@ -20,7 +20,7 @@
       </ul>
     </nav>
   </header>
-  <main class="container p-20">
+  <main class="container flex justify-center p-20">
     {{ $slot }}
   </main>
 </body>
