@@ -33,4 +33,9 @@ class UserController extends Controller
         User::create($validated);
         return redirect()->route('users.index');
     }
+    public function destroy($id){
+        $user = User::findOrFail($id);
+        $user->delete();
+        return redirect()->route('users.index');
+    }
 }
