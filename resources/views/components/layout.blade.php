@@ -8,6 +8,11 @@
   @vite('./resources/css/app.css')
 </head>
 <body>
+  @if(session('success'))
+    <div id="flash">
+      {{ session('success') }}
+    </div>
+  @endif
   <header class="fixed w-full flex justify-between px-3 py-4 bg-black ">
     <div class="text-white"><a href="/">Logo</a></div>
     <nav>

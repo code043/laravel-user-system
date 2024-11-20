@@ -31,11 +31,11 @@ class UserController extends Controller
             'groups_id' => 'required|exists:groups,id'
         ]);
         User::create($validated);
-        return redirect()->route('users.index');
+        return redirect()->route('users.index')->with('success', 'User created!');
     }
     public function destroy($id){
         $user = User::findOrFail($id);
         $user->delete();
-        return redirect()->route('users.index');
+        return redirect()->route('users.index')->with('success', 'User deleted');
     }
 }
