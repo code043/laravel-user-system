@@ -12,8 +12,8 @@ class UserController extends Controller
         $users = User::with('group')->orderBy('created_at', 'desc')->paginate(10);
         return view('users.index', ['users' => $users]);
     }
-    public function info($id){
-        $user = User::with('group')->findOrFail($id);
+    public function info(User $user){
+        $user->load('groups');
         return view('users.info', ['user' => $user]);
     }
     public function create(){
@@ -33,8 +33,8 @@ class UserController extends Controller
         User::create($validated);
         return redirect()->route('users.index')->with('success', 'User created!');
     }
-    public function destroy($id){
-        $user = User::findOrFail($id);
+    public function destroy(User $user){
+        
         $user->delete();
         return redirect()->route('users.index')->with('success', 'User deleted');
     }
